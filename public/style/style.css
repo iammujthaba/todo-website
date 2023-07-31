@@ -1,0 +1,117 @@
+body {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Courgette', cursive;
+}
+#head{
+  display: flex;
+  justify-content: space-between; /* This will push the left and right items to opposite ends */
+}
+.box{
+  max-width: 450px;
+  margin:auto;
+  padding-right: 2.5rem!important;
+  padding-left: 2.5rem!important;
+  background: #8EA7E9;
+  border-radius: 7px;
+  box-sizing: content-box;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.col-three, .col-one{
+  background-color: #fff;
+  padding: 10px;
+  height: 40px;
+  margin: 1px;
+  box-sizing: content-box;
+  margin: 0px;
+}
+.col-one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:7px 7px 0% 0% ;
+}
+.heading-with-space {
+  letter-spacing: 2px;
+  font-weight: 5px;
+}
+#calander{
+  height: 25px;
+}
+.day{
+  margin-left: 5px;
+}
+.col-two{
+  height: 200px;
+  background-color: #fff;
+}
+.scroll-bar{
+  height:100%;
+  width:100%;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  overflow:auto;
+}
+.col-three{
+  border-radius:0% 0% 7px 7px;
+}
+[data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+  font-size: 18px;
+}
+.multiline-input {
+  border: 1px solid #ccc;
+  width: 340px;
+  min-height: 30px;
+  max-height: 180px;
+  overflow-y: hidden;
+  white-space: pre-wrap;
+}
+#but{
+  margin-left: 11px;
+  padding-bottom: 2px;
+  font-family: Georgia, Garamond, serif;
+}
+.boxof{
+  width: 99wh;
+  height: 35px;
+  padding: 5px;
+  padding-left: 7px;
+  margin-left: 9px;
+}
+input{
+  font-family: Georgia, Garamond, serif;
+}
+input[type="checkbox"]:checked ~ label {
+  text-decoration: line-through;
+}
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 45%;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+img{
+  height: 50px;
+}
+ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-top: 20px;
+}
+li{
+  margin-left: 10px;
+}
+

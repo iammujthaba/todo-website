@@ -1,0 +1,76 @@
+<!-- https://todolistapp-x7i5.onrender.com/ -->
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+  <div class="row">
+    <div class="box py-4">
+      <div class="heading">
+        <h2>
+          <span class="heading-with-space">
+            <%= tit %>
+          </span>
+        </h2>
+      </div>
+      <div class="col-one" id="head">
+        <div class="left-item d-flex">
+          <img src="/localFile/gif/icons8-calendar.gif" alt="calendeer" id="calander">
+          <div class="day">
+            <%= day %>
+          </div>
+        </div>
+        <div class="right-item">
+          <%= month %>, <%= year %>
+        </div>
+      </div>
+      <div class="col col-two " id="mid">
+        <div class="scroll-bar px-2 pt-2">
+          <% if(locals.todo){ %>
+            <% for (var x of todo){ %>
+              <div class="input-group mb-2 d-block">
+                <div class="input-group-text">
+                  <input class="form-check-input mt-0" type="checkbox" id="checkbox"
+                    aria-label="Checkbox for following text input">
+                  <label class="boxof d-block form-control" for="checkbox">
+                    <%= x %>
+                  </label>
+                </div>
+              </div>
+            <% } %>
+          <% }%>
+        </div>
+      </div>
+      <div class="col col-three">
+        <% if(locals.titles){ %>
+          <% if(titles=="Today" ){ %>
+            <form action="/" class="d-flex" method="POST">
+              <input contenteditable="true" class="multiline-input form-control" name="myInput"placeholder="Add Item Hear">
+              <input type="submit" class="btn btn-primary btn-sm" value="Add Task" id="but">
+            </form>
+          <% }else{ %>
+            <form action="/work" class="d-flex" method="POST">
+              <input contenteditable="true" class="multiline-input form-control" name="myInput"
+                placeholder="Add Item Hear">
+              <input type="submit" class="btn btn-primary btn-sm" value="Add Task" id="but">
+            </form>
+          <% } %>
+        <% }else{ %>
+          <% if(tit=="Today" ){ %>
+            <form action="/" class="d-flex" method="POST">
+              <input contenteditable="true" class="multiline-input form-control" name="myInput"
+                placeholder="Add Item Hear">
+              <input type="submit" class="btn btn-primary btn-sm" value="Add Task" id="but">
+            </form>
+          <% }else{ %>
+            <form action="/work" class="d-flex" method="POST">
+              <input contenteditable="true" class="multiline-input form-control" name="myInput"
+                placeholder="Add Item Hear">
+              <input type="submit" class="btn btn-primary btn-sm" value="Add Task" id="but">
+            </form>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+            
+<%- include("partials/footer.ejs") %>
